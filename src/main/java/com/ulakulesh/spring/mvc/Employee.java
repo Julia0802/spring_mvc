@@ -9,6 +9,8 @@ public class Employee {
     private int salary;
     private String department;
     private Map<String, String> departments;
+    private String carBrand;
+
 
     public void setDepartments(Map<String, String> departments) {
         this.departments = departments;
@@ -56,6 +58,14 @@ public class Employee {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
     }
 
     @Override
