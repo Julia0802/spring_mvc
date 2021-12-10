@@ -29,8 +29,9 @@
     <br><br>
     Foreign Language(s)
     <form:checkboxes path="languages" items="${employee.languageList}"/>
-
-
+    <br><br>
+    Phone Number<form:input path="phoneNumber"/>
+    <form:errors path="phoneNumber"/>
     <br><br>
     <input type="submit" value="OK">
 

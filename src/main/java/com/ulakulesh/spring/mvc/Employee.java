@@ -13,6 +13,8 @@ public class Employee {
     @Min(value = 500, message = "must be grater than 499")
     @Max(value = 1000, message ="must be less than 1001")
     private int salary;
+    @Pattern(regexp="\\d{3}-\\d{2}-\\d{2}", message="please use pattern XXX-XX-XX")
+    private String phoneNumber;
     private String department;
     private Map<String, String> departments;
     private String carBrand;
@@ -110,6 +112,14 @@ public class Employee {
 
     public void setLanguageList(Map<String, String> languageList) {
         this.languageList = languageList;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
