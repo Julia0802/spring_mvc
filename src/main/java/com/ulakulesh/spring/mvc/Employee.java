@@ -1,9 +1,7 @@
 package com.ulakulesh.spring.mvc;
 
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,6 +10,8 @@ public class Employee {
     private String name;
     @NotBlank(message = "surname is required field")
     private String surname;
+    @Min(value = 500, message = "must be grater than 499")
+    @Max(value = 1000, message ="must be less than 1001")
     private int salary;
     private String department;
     private Map<String, String> departments;
